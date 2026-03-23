@@ -108,7 +108,7 @@ export default function Blogs() {
                                     {post.excerpt}
                                 </p>
 
-                                {/* THE FIX IS RIGHT HERE: It now says /blog/ instead of /blogs/ */}
+
                                 <Link href={`/blog/${post.id}`} className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold font-sans mt-auto">
                                     Read Article <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                 </Link>

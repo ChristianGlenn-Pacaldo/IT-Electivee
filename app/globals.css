@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
-/* Tells Tailwind v4 to trigger dark mode when the .dark class is active */
 @variant dark (&:where(.dark, .dark *));
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
+
   body {
-    /* NO hardcoded background colors here! We let layout.tsx control the colors. */
     @apply antialiased min-h-screen transition-colors duration-500;
   }
 }
@@ -16,28 +15,35 @@
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: transparent; 
+  background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   @apply bg-slate-300 rounded-full;
 }
+
 .dark ::-webkit-scrollbar-thumb {
   @apply bg-slate-800;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-slate-400;
 }
+
 .dark ::-webkit-scrollbar-thumb:hover {
   @apply bg-slate-700;
 }
 
 @theme {
   --animate-glow: glow 2s ease-in-out infinite alternate;
+
   @keyframes glow {
     from {
       box-shadow: 0 0 10px #3B82F6, 0 0 20px #2563EB;
     }
+
     to {
       box-shadow: 0 0 20px #3B82F6, 0 0 40px #2563EB;
     }
@@ -45,20 +51,43 @@
 }
 
 @keyframes wave-animation {
-0% { transform: rotate( 0.0deg) }
-10% { transform: rotate(14.0deg) }
-20% { transform: rotate(-8.0deg) }
-30% { transform: rotate(14.0deg) }
-40% { transform: rotate(-4.0deg) }
-50% { transform: rotate(10.0deg) }
-60% { transform: rotate( 0.0deg) }
-100% { transform: rotate( 0.0deg) }
+  0% {
+    transform: rotate(0.0deg);
+  }
+
+  10% {
+    transform: rotate(14.0deg);
+  }
+
+  20% {
+    transform: rotate(-8.0deg);
+  }
+
+  30% {
+    transform: rotate(14.0deg);
+  }
+
+  40% {
+    transform: rotate(-4.0deg);
+  }
+
+  50% {
+    transform: rotate(10.0deg);
+  }
+
+  60% {
+    transform: rotate(0.0deg);
+  }
+
+  100% {
+    transform: rotate(0.0deg);
+  }
 }
 
 .waving-hand:hover {
-animation-name: wave-animation;
-animation-duration: 2.5s;
-animation-iteration-count: infinite;
-transform-origin: 70% 70%;
-display: inline-block;
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
 }

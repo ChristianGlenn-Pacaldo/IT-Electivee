@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowLeft, CalendarDays } from "lucide-react";
 
 export default async function ArchiveOptionalCatchAllPage({ params }: { params: Promise<{ date?: string[] }> }) {
-    // In an optional catch-all segment [[...slug]], params can be empty if at the root '/archive'
+
     const { date } = await params;
 
     return (
