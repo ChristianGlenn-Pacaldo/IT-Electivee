@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import ProjectCard from '@/components/features/projects/ProjectCard';
 import { Search, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function ProjectsPage() {
-
     const allProjects = [
         {
             title: "Bisakol Shop",
@@ -43,17 +43,14 @@ export default function ProjectsPage() {
         },
     ];
 
-
     const [searchQuery, setSearchQuery] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const projectsPerPage = 3;
-
 
     const filteredProjects = allProjects.filter(project =>
         project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         project.tech.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()))
     );
-
 
     const indexOfLastProject = currentPage * projectsPerPage;
     const indexOfFirstProject = indexOfLastProject - projectsPerPage;
@@ -63,7 +60,6 @@ export default function ProjectsPage() {
     return (
         <div className="container mx-auto px-4 md:px-6 py-20 min-h-screen">
 
-
             <div className="max-w-3xl mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900 dark:text-white tracking-tight font-serif leading-tight">
                     My Projects
@@ -72,7 +68,6 @@ export default function ProjectsPage() {
                     A collection of my recent work, side projects, and open-source contributions.
                 </p>
             </div>
-
 
             <div className="relative max-w-md mb-12 group animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -93,39 +88,14 @@ export default function ProjectsPage() {
             {currentProjects.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
                     {currentProjects.map((project, index) => (
-                        <a
+                        <ProjectCard
                             key={index}
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group bg-white dark:bg-[#0B1120] rounded-3xl border border-slate-200 dark:border-white/5 shadow-sm hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 overflow-hidden flex flex-col h-full"
-                        >
-                            <div className="aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
-                            </div>
-                            <div className="p-6 flex flex-col flex-grow">
-                                <h2 className="text-xl font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors font-serif">
-                                    {project.title}
-                                </h2>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-sans mb-4 flex-grow line-clamp-3">
-                                    {project.description}
-                                </p>
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tech.map((t) => (
-                                        <span
-                                            key={t}
-                                            className="px-3 py-1 bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider rounded-full font-sans"
-                                        >
-                                            {t}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        </a>
+                            title={project.title}
+                            description={project.description}
+                            tech={project.tech}
+                            link={project.link}
+                            image={project.image}
+                        />
                     ))}
                 </div>
             ) : (
@@ -133,7 +103,6 @@ export default function ProjectsPage() {
                     <p className="text-slate-500 dark:text-slate-400 font-medium">No projects found matching &quot;{searchQuery}&quot;</p>
                 </div>
             )}
-
 
             {totalPages > 1 && (
                 <div className="mt-16 flex justify-center items-center gap-4 animate-in fade-in duration-700">
@@ -151,8 +120,8 @@ export default function ProjectsPage() {
                                 key={i}
                                 onClick={() => setCurrentPage(i + 1)}
                                 className={`w-10 h-10 rounded-xl font-bold text-sm transition-all ${currentPage === i + 1
-                                    ? 'bg-blue-600 text-white shadow-md'
-                                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5'
+                                        ? 'bg-blue-600 text-white shadow-md'
+                                        : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5'
                                     }`}
                             >
                                 {i + 1}
@@ -169,7 +138,6 @@ export default function ProjectsPage() {
                     </button>
                 </div>
             )}
-
 
             <div className="mt-24 border-t border-slate-200 dark:border-white/5 pt-10 text-center">
                 <p className="text-sm text-slate-500 dark:text-slate-500 font-sans">
