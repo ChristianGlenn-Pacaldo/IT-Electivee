@@ -99,7 +99,7 @@ export default function Contact() {
 
                         {status === "success" && (
                             <p className="text-green-600 dark:text-green-400 text-sm font-medium font-sans text-center animate-in fade-in duration-300">
-                                ✓ Your email client has been opened with the message. Thank you!
+                                ✓ Your email has been sent, Please wait for the response. Thank you!
                             </p>
                         )}
 

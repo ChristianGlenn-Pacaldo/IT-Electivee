@@ -78,13 +78,13 @@ export default function HeroSection() {
 
                     <div className="absolute -inset-1.5 bg-blue-500 rounded-[2.5rem] blur-xl opacity-60 dark:opacity-100 animate-pulse z-0"></div>
 
-                    <div className="relative h-full w-full rounded-[2.5rem] overflow-hidden bg-slate-100 dark:bg-[#070B1A] border-4 border-slate-200 dark:border-[#10172A] z-10">
+                    <div className="group relative h-full w-full rounded-[2.5rem] overflow-hidden bg-slate-100 dark:bg-[#070B1A] border-4 border-slate-200 dark:border-[#10172A] z-10">
                         {/* Image for Light Mode (crossfades out in dark mode) */}
                         <Image
                             src="/profile.jpg"
                             alt="Glenn Light Mode"
                             fill
-                            className="object-cover transition-all duration-700 hover:scale-105 opacity-100 dark:opacity-0"
+                            className="object-cover transition-all duration-700 group-hover:scale-105 opacity-100 dark:opacity-0"
                             sizes="(max-width: 768px) 100vw, 420px"
                             priority
                         />
@@ -93,7 +93,7 @@ export default function HeroSection() {
                             src="/boss.jpg"
                             alt="Glenn Dark Mode"
                             fill
-                            className="object-cover transition-all duration-700 hover:scale-105 opacity-0 dark:opacity-100"
+                            className="object-cover transition-all duration-700 group-hover:scale-105 opacity-0 dark:opacity-100"
                             sizes="(max-width: 768px) 100vw, 420px"
                             priority
                         />
