@@ -21,7 +21,7 @@ export default function Footer() {
 
                     <div>
                         <h3 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-5 font-mono">
-                            // Pages
+                            {"// Pages"}
                         </h3>
                         <ul className="space-y-3">
                             {[
@@ -45,7 +45,7 @@ export default function Footer() {
 
                     <div>
                         <h3 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-5 font-mono">
-                            // Resources
+                            {"// Resources"}
                         </h3>
                         <ul className="space-y-3">
                             {[
@@ -69,7 +69,7 @@ export default function Footer() {
 
                     <div>
                         <h3 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-5 font-mono">
-                            // Connect
+                            {"// Connect"}
                         </h3>
                         <ul className="space-y-3">
                             {[
