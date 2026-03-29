@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { GraduationCap, Code2, MapPin, User, FileText, Award } from 'lucide-react';
+import { GraduationCap, MapPin, User, FileText, Award } from 'lucide-react';
 
 export default function About() {
   const skills = ['Next.js', 'React.js', 'TypeScript', 'TailwindCSS', 'PHP', 'C#', 'Postgresql', 'MySQL'];
