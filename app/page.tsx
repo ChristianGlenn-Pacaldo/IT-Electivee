@@ -17,7 +17,7 @@ export default function Home() {
         <div className="flex justify-between items-end mb-10 px-4 md:px-0">
           <div>
             <h2 className="text-3xl font-bold mb-2 text-slate-900 dark:text-white tracking-tight">Featured Projects</h2>
-            <p className="text-slate-600 dark:text-slate-400">Selected work I've built recently.</p>
+            <p className="text-slate-600 dark:text-slate-400">Selected work I&apos;ve built recently.</p>
           </div>
           <Link href="/projects" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline font-medium hidden md:block transition-colors">
             View all projects &rarr;
@@ -50,10 +50,10 @@ export default function Home() {
 
       <section className="py-24 text-center bg-blue-600 dark:bg-blue-600/10 dark:border dark:border-blue-500/20 text-white rounded-[2.5rem] mb-12 px-4 shadow-xl shadow-blue-500/10">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight dark:text-white font-serif">
-          Let's build something great.
+          Let&apos;s build something great.
         </h2>
         <p className="text-blue-100 dark:text-blue-200/70 mb-10 max-w-lg mx-auto text-lg">
-          I'm currently open for new opportunities and freelance projects.
+          I&apos;m currently open for new opportunities and freelance projects.
         </p>
         <Button asChild size="lg" className="px-8 py-7 bg-white dark:bg-blue-600 text-blue-600 dark:text-white font-bold rounded-full hover:bg-slate-50 dark:hover:bg-blue-500 transition-all shadow-lg text-base hover:scale-105">
           <Link href="/contact">
