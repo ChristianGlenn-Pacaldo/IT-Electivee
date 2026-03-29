@@ -28,7 +28,10 @@ export default function About() {
 
           <div className="absolute -top-16 md:-top-24 left-4 md:left-8 z-10">
             <div className="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-slate-50 dark:border-[#03040C] bg-white dark:bg-slate-800 relative overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
-              <Image src="/profile.jpg" alt="Glenn" fill className="object-cover" />
+              {/* Image for Light Mode (crossfades out in dark mode) */}
+              <Image src="/profile.jpg" alt="Glenn Light Mode" fill className="object-cover transition-opacity duration-500 opacity-100 dark:opacity-0" />
+              {/* Image for Dark Mode (crossfades in in dark mode) */}
+              <Image src="/boss.jpg" alt="Glenn Dark Mode" fill className="object-cover transition-opacity duration-500 opacity-0 dark:opacity-100" />
             </div>
           </div>
 

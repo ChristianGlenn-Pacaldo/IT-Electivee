@@ -41,10 +41,10 @@ export default function Contact() {
                 <div className="space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
                     <div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-slate-900 dark:text-white tracking-tight font-serif">
-                            Let&#39;s connect.
+                            Let&apos;s connect.
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-sans max-w-lg">
-                            I&#39;m currently looking for new opportunities. Whether you have a question, a freelance project, or just want to say hi, I&#39;ll try my best to get back to you!
+                            I&apos;m currently looking for new opportunities. Whether you have a question, a freelance project, or just want to say hi, I&apos;ll try my best to get back to you!
                         </p>
                     </div>
 
