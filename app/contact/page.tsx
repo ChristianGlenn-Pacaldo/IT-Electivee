@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { Mail, Phone, MessageSquare, Clock, Linkedin, Github, Twitter, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, MessageSquare, Clock, Github, Facebook, Instagram } from "lucide-react";
 
 export default function Contact() {
     const [firstName, setFirstName] = useState("");

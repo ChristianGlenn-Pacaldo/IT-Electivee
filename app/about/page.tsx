@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { GraduationCap, MapPin, User, FileText, Award } from 'lucide-react';
+import { GraduationCap, MapPin, User, FileText, Award, ImageIcon } from 'lucide-react';
+import PhotoGallery from '@/components/features/about/PhotoGallery';
 
 export default function About() {
   const skills = ['Next.js', 'React.js', 'TypeScript', 'TailwindCSS', 'PHP', 'C#', 'Postgresql', 'MySQL'];
@@ -91,6 +92,16 @@ export default function About() {
                   </span>
                 ))}
               </div>
+            </div>
+
+            <div className="bg-white dark:bg-[#0B1120] p-6 rounded-2xl border border-slate-200 dark:border-white/5 shadow-sm">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  <ImageIcon size={18} className="text-blue-500" />
+                  <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-widest">Photos</h3>
+                </div>
+              </div>
+              <PhotoGallery />
             </div>
           </div>
 
