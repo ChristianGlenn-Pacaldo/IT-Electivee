@@ -91,3 +91,12 @@
   transform-origin: 70% 70%;
   display: inline-block;
 }
+
+@keyframes soundbar {
+  0% {
+    height: 20%;
+  }
+  100% {
+    height: 100%;
+  }
+}
